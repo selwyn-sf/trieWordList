@@ -112,13 +112,13 @@ void CTrieWordList::allocateWordList(int nwords, int len) {
 // 6. Go to next character in pWord recursively enter findSubWords(pWord,pSubWords).
 //		This starts at the root of the Trie again.
 // 7. For each subWord found, recursively enter findSubWords(pWord,pSubWords).
-// 7. If you reach the end of pWord and the deepest recursion of
+// 8. If you reach the end of pWord and the deepest recursion of
 // 		findSubWords(pWord,pSubWords) has found a COMPLETE subWord, return true
 //		to the each level up the recursion stack.  At the top level, inrement
 // 		nSubWords.
 //		subWord in the Trie AND nSubwords > 1, then pWord is composed
 //		of other words in the list.  Return true.
-// 8. Else if nSubwords <= 1, pWord matched itself only.  So subWords
+// 9. Else if nSubwords <= 1, pWord matched itself only.  So subWords
 //		were not found.  Return false.
 bool CTrieWordList::findSubWords(char *pWord, int *pSubWords) {
 	char c;
